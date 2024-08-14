@@ -6,7 +6,8 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /TheMovieProviderBot
-WORKDIR /TheMovieProviderBot
+RUN mkdir /Shivam
+WORKDIR /Shivam
 COPY start.sh /start.sh
+EXPOSE 5001
 CMD ["/bin/bash", "/start.sh"]
